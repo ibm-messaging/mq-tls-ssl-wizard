@@ -28,8 +28,9 @@
 /*  271106 - V1.3 - Fixes                                         */
 /*  011209 - V2.0 - Fixes + separate CA machine                   */
 /*  270110 - V2.0.0.1 - SSLPEER quotes and italic font fix        */
+/*  081214 - V2.0.0.2 - Release to GitHub                         */
 /*                                                                */
-/*  See MO04.pdf for function change history                      */
+/*  See tlswizard.odp for function change history                 */
 /*                                                                */
 /******************************************************************/
 
@@ -82,7 +83,7 @@ import javax.swing.filechooser.FileFilter;
 public class MQTLSSSLWizard extends JFrame  implements ActionListener
                                                  , ComponentListener
                                                  , KeyListener {
-  private static final int VERSION = 2001;
+  private static final int VERSION = 2002;
 
   /****************************************************************/
   /* RC constants                                                 */

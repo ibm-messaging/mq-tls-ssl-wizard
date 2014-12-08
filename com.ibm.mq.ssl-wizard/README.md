@@ -37,6 +37,9 @@ These include:
 History
 =======
 Original author: Ian Vanstone, IBM Hursley
+
 First released as SupportPac MO04: 02 Sep 2005
+
 Last updated in SupportPac: 04 Jan 2010
+
 Released to GitHub: Dec 2014
