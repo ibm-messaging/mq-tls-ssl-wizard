@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build" default="jar">
+	<property name="BuildId" value="${eclipse.buildId}" />
+	<property name="javac" value="c:\\program files (x86)\\ibm\\java60\\bin\\javac.exe"/>
+	<property name="mqJarsHome"  value="c:\\Program Files\\IBM\\WebSphere MQ V80\\java\\lib"/>
+
+
+	
+	<property name="buildRoot"        value="${basedir}\\bin"/>
+	<property name="buildClassesPath" value="${buildRoot}\\classes"/>
+	
+	<property name="jarfile" value="${buildRoot}\tlswizard.jar" />
+
+	<echo message="basedir = ${basedir}" />
+	
+	<target name="clean">	
+		<delete dir="${buildClassesPath}"/>
+		<mkdir dir="${buildRoot}" />
+		<mkdir dir="${buildClassesPath}" />
+
+	</target>
+	
+	<path id="classpath.refid">
+				<fileset dir="${mqJarsHome}">
+					<!--include name="com.ibm.mq.*.jar" /-->
+				</fileset>
+	</path>
+		
+	<pathconvert targetos="windows" property="classpath" refid="classpath.refid">
+	</pathconvert>
+
+	<target name="classes" depends="clean">
+		<javac srcdir="${basedir}\src" 
+			   executable="${javac}"
+			   verbose="false" 
+			   destdir="${buildClassesPath}" 
+			   fork="no" 
+			   optimize="true" 
+			   debug="false">
+			  <classpath refid="classpath.refid" />
+		</javac>
+	</target>
+	
+	
+
+
+	<target name="jar" depends="classes">
+		<jar jarfile="${jarfile}" manifest="${basedir}\src\MQTLSSSLWizard.manifest">
+			<fileset dir="${buildClassesPath}">
+			</fileset>
+		</jar>
+	</target>
+
+</project>
