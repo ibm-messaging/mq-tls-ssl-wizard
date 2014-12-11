@@ -4,6 +4,8 @@ Abstract
 The IBM MQ TLS/SSL Wizard is a utility designed to ease the administration 
 of a basic TLS/SSL channel.
 
+This program was originally released as SupportPac MO04.
+
 Description
 ===========
 The MQ TLS/SSL Wizard takes input in series of entry panels and then generates
@@ -33,6 +35,13 @@ These include:
 * Support the IBM MQ V8 option to name the certificate label
 * Update the list of CipherSuites and CipherSpecs for different environments
 * Recognise that MQ may not be installed in fixed locations even on Unix systems   
+
+Pull requests
+=============
+Contributions to this package can be accepted under the terms of the 
+IBM Contributor License Agreement, found in the file CLA.md of this repository.
+
+When submitting a pull request, you must include a statement stating you accept the terms in CLA.md.
 
 History
 =======
